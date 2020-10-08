@@ -1,6 +1,9 @@
 const CustomError = require("../extensions/custom-error");
 
-module.exports = function createDreamTeam(arr) {
-  let newArr = arr.filter(item => (typeof item === "string"));
-  return newArr.map(item => item[0]).sort().join(''); 
+module.exports = function createDreamTeam(array) {
+  if (typeof array === null || typeof array === "undefined" || !Array.isArray(array)) return false;
+
+  let newArr = array.filter(item => (typeof item === "string"));
+  let stringNames = newArr.map(item => item.replace(/\s/g, ''));
+  return stringNames.map(item => item[0]).sort().join('').toUpperCase(); 
 };
