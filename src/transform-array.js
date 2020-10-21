@@ -8,7 +8,6 @@ module.exports = function transform(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     if ( arr[i] === "--discard-prev") {
-      if()
       remArr = newArr.splice(i - 1, 2);
     } else if (arr[i] === "--discard-next") {
       remArr = newArr.splice(i, 2);
