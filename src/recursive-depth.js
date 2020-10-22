@@ -14,7 +14,7 @@ module.exports = class DepthCalculator {
         }
       }
     }
-    level += depth;
+    level += locLevel;
     return level;
   }
 };
